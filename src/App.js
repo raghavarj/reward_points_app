@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import './App.css';
 //Manually created javascript object for customer data
 import data from './data';
-
+import calRew from './CalculateRewards'
 
 function App() {
   // useState hook for setting data for display, calculate, add user-rewards data
@@ -168,15 +168,3 @@ function App() {
 }
 
 export default App;
-//Calculate rewards function
-function calRew(price) {
-  let rewards = 0;
-  if (price > 100) {
-    rewards = (price - 100) * 2;
-  }
-  if (price > 50) {
-    rewards = rewards + (price - 50);
-  }
-  return rewards;
-
-}
